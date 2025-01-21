@@ -6,7 +6,7 @@ const WorkExperience = () => {
         {
             role: "UI/UX Designer",
             company: "Why Global Services",
-            date: "July 2023 - Jan 2025",
+            date: "July 2024 - Jan 2025",
             logo: WhyGlobalLogo,
             details: [
                 "Conducted user research through surveys, interviews, and usability tests to understand user needs and preferences.",
@@ -18,7 +18,7 @@ const WorkExperience = () => {
         {
             role: "Full-Stack Web Developer Intern",
             company: "Why Global Services",
-            date: "January 2024 - Present",
+            date: "July 2024 - jan 2025",
             logo: WhyGlobalLogo,
             details: [
                 "Developed dynamic and responsive web applications using modern frameworks and libraries.",
@@ -49,7 +49,7 @@ const WorkExperience = () => {
                             <p className="text-sm text-gray-400 sm:mr-6">
                                 {experience.date}
                             </p>
-                            <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex-1 transition-transform duration-300 hover:scale-105">
+                            <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex-1 hover:shadow-indigo-500/40 transform hover:scale-110 transition-all duration-300">
                                 <div className="flex items-center mb-4">
                                     <img
                                         src={experience.logo}

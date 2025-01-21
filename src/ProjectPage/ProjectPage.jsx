@@ -1,7 +1,7 @@
 import React from "react";
 import Portfolio from "../assets/Portfolio.1.jpg";
 import wallpaper from "../assets/wp.1.jpg";
-import movie from "../assets/movie.1.jpg";
+import movie from "../assets/movie.jpg";
 import Doctor from "../assets/doctor.1.jpg";
 
 const projects = [
@@ -9,25 +9,25 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, projects, and contact details.",
     image: Portfolio,
-    githubLink: "https://github.com/yourusername/portfolio-website",
+    githubLink: "https://github.com/dellibabus/dellibabus-portfolio",
   },
   {
     title: "Wallpaper Website",
     description: "A MERN stack wallpaper website for showcasing high-quality wallpapers.",
     image: wallpaper,
-    githubLink: "https://github.com/yourusername/wallpaper-website",
+    githubLink: "https://github.com/dellibabus/wallpaper-website-MERN",
   },
   {
     title: "Online Movie Ticket Booking",
     description: "An online platform to book movie tickets with user authentication and payment integration.",
     image: movie,
-    githubLink: "https://github.com/yourusername/movie-ticket-booking",
+    githubLink: "https://github.com/PopcornSpot",
   },
   {
     title: "Doctor Appointment",
     description: "An app for scheduling doctor appointments with real-time availability.",
     image: Doctor,
-    githubLink: "https://github.com/yourusername/doctor-appointment",
+    githubLink: "https://github.com/online-consultation-project",
   },
 ];
 

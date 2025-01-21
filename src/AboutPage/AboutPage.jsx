@@ -16,7 +16,7 @@ const AboutSection = () => {
                     </p>
                     <p className="leading-relaxed text-lg text-gray-300 max-w-3xl">
                         I specialize in front-end frameworks like <span className="text-indigo-400">React</span>, and back-end technologies like
-                        <span className="text-indigo-400"> Node.js, MongoDB,</span> and <span className="text-indigo-400">Redis</span>. My focus is on building seamless user experiences and
+                        <span className="text-indigo-400"> Node.js, MongoDB,</span> and <span className="text-indigo-400">Express.js</span>. My focus is on building seamless user experiences and
                         clean, maintainable code. When I'm not coding, you’ll find me exploring the latest trends in design
                         or mentoring budding developers.
                     </p>
