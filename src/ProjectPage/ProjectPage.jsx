@@ -1,8 +1,9 @@
 import React from "react";
-import Portfolio from "../assets/Portfolio.1.jpg";
-import wallpaper from "../assets/wp.1.jpg";
+import Portfolio from "../assets/Portfolio.jpg";
+import wallpaper from "../assets/wallpaper.jpg";
 import movie from "../assets/movie.jpg";
 import Doctor from "../assets/doctor.1.jpg";
+import Lawyer from "../assets/Lawyer.jpeg";
 
 const projects = [
   {
@@ -29,6 +30,12 @@ const projects = [
     image: Doctor,
     githubLink: "https://github.com/online-consultation-project",
   },
+  {
+    title: "Lawyer Appointment",
+    description: "An app for scheduling lawyer appointments with real-time availability.",
+    image: Lawyer,
+    githubLink: "https://github.com/Lawyerwebsite",
+  }
 ];
 
 const ProjectSection = () => {
@@ -54,7 +61,7 @@ const ProjectSection = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
