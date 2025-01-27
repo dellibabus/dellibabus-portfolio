@@ -19,7 +19,7 @@ const projects = [
     githubLink: "https://github.com/dellibabus/wallpaper-website-MERN",
   },
   {
-    title: "Online Movie Ticket Booking",
+    title: "Movie Ticket Booking Website Online",
     description: "An online platform to book movie tickets with user authentication and payment integration.",
     image: movie,
     githubLink: "https://github.com/PopcornSpot",
