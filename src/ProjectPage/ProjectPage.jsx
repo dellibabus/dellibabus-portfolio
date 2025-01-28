@@ -4,6 +4,7 @@ import wallpaper from "../assets/wallpaper.jpg";
 import movie from "../assets/movie.jpg";
 import Doctor from "../assets/doctor.1.jpg";
 import Lawyer from "../assets/Lawyer.jpeg";
+import Porsche from "../assets/Porsche.jpg";
 
 const projects = [
   {
@@ -35,6 +36,12 @@ const projects = [
     description: "An app for scheduling lawyer appointments with real-time availability.",
     image: Lawyer,
     githubLink: "https://github.com/Lawyerwebsite",
+  },
+  {
+    title: "Porsche Landing Page",
+    description: "A responsive landing page for Porsche showcasing their latest models.",
+    image: Porsche,
+    githubLink: "https://github.com/dellibabus/Porsche",
   }
 ];
 
