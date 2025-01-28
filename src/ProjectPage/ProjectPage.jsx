@@ -1,5 +1,5 @@
 import React from "react";
-import Portfolio from "../assets/Portfolio.jpg";
+import Portfolio from "../assets/portfolio.jpg";
 import wallpaper from "../assets/wallpaper.jpg";
 import movie from "../assets/movie.jpg";
 import Doctor from "../assets/doctor.1.jpg";
