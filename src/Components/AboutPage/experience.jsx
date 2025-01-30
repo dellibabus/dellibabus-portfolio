@@ -1,5 +1,5 @@
 import React from "react";
-import WhyGlobalLogo from "../assets/wog.png";
+import WhyGlobalLogo from "../../assets/wog.png";
 
 const WorkExperience = () => {
     const experiences = [

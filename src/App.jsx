@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './NavBar/Navbar';
-import HeroSection from './HomePage/HomePage';
-import AboutSection from './AboutPage/AboutPage';
-import SkillsSection from './SkillPage/SkillPage';
-import ProjectScetion from './ProjectPage/ProjectPage';
-import ContactSection from './ContactPage/ContactPage';
-import Footer from './ContactPage/Footer';
+import Navbar from './Components/NavBar/Navbar';
+import HeroSection from './Components/HomePage/HomePage';
+import AboutSection from './Components/AboutPage/AboutPage';
+import SkillsSection from './Components/SkillPage/SkillPage';
+import ProjectScetion from './Components/ProjectPage/ProjectPage';
+import ContactSection from './Components/ContactPage/ContactPage';
+import Footer from './Components/ContactPage/Footer';
 
 const App = () => {
   return (
@@ -15,9 +15,9 @@ const App = () => {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <ProjectScetion/>
-        <ContactSection/>
-        <Footer/>
+        <ProjectScetion />
+        <ContactSection />
+        <Footer />
       </main>
     </>
   );

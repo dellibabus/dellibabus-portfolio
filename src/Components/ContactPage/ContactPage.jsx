@@ -12,8 +12,8 @@ const ContactSection = () => {
     setResult("Sending...");
     const formData = new FormData(event.target);
 
-    // Append access key safely
-    formData.append("access_key",apiKey);
+
+    formData.append("access_key", apiKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -53,10 +53,9 @@ const ContactSection = () => {
               Get in Touch
             </h3>
             <form className="space-y-6" onSubmit={onSubmit}>
-              {/* Hidden Input for Access Key */}
+
               <input type="hidden" name="access_key" value={import.meta.env.VITE_ACCESS_KEY} />
 
-              {/* Grid for Name and Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -91,7 +90,7 @@ const ContactSection = () => {
                   />
                 </div>
               </div>
-              {/* Mobile Number */}
+
               <div>
                 <label
                   htmlFor="mobile"
@@ -127,7 +126,7 @@ const ContactSection = () => {
                   required
                 ></textarea>
               </div>
-              {/* Submit Button */}
+
               <button
                 type="submit"
                 className="w-full py-3 rounded-lg bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400"
@@ -137,7 +136,6 @@ const ContactSection = () => {
               </button>
             </form>
 
-            {/* Result Message */}
             {result && (
               <p className="text-center text-sm mt-4 text-gray-300">
                 {result}

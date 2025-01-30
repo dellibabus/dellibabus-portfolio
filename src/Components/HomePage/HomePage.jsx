@@ -46,7 +46,7 @@ const HomePage = () => {
                 `}
             </style>
             <section id="home" className="container mx-auto px-6 py-12 pt-20 lg:flex lg:items-center lg:justify-between">
-                {/* Left Section - Text */}
+
                 <div className="space-y-8 lg:w-1/2 fade-in">
                     <h1 className="text-5xl xl:text-6xl font-extrabold text-white leading-snug tracking-wide">
                         Heyy, I'm Delli Babu
@@ -77,7 +77,6 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                {/* Right Section - Image */}
                 <div className="mt-10 lg:mt-0 lg:w-1/2 hidden md:block slide-in">
                     <img
                         src="https://i.postimg.cc/HxHyt53c/undraw-heatmap-uyye.png"

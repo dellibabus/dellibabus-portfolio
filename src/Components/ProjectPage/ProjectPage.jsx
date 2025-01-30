@@ -1,10 +1,10 @@
 import React from "react";
-import Portfolio from "../assets/portfolio.jpg";
-import wallpaper from "../assets/wallpaper.jpg";
-import movie from "../assets/movie.jpg";
-import Doctor from "../assets/doctor.1.jpg";
-import Lawyer from "../assets/Lawyer.jpeg";
-import Porsche from "../assets/Porsche.jpg";
+import Portfolio from "../../assets/portfolio.jpg";
+import wallpaper from "../../assets/wallpaper.jpg";
+import movie from "../../assets/movie.jpg";
+import Doctor from "../../assets/doctor.1.jpg";
+import Lawyer from "../../assets/Lawyer.jpeg";
+import Porsche from "../../assets/Porsche.jpg";
 
 const projects = [
   {
@@ -49,7 +49,7 @@ const ProjectSection = () => {
   return (
     <section className="bg-gray-900 py-16 pt-20" id="projects">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
+
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-indigo-500 uppercase tracking-wide">Projects</h2>
           <p className="text-lg text-gray-300 mt-4">
@@ -57,20 +57,20 @@ const ProjectSection = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
+
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
               className="relative rounded-lg overflow-hidden shadow-lg bg-gray-800 group hover:shadow-2xl transition-all duration-300"
             >
-              {/* Project Image */}
+
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              {/* Overlay */}
+
               <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-300 text-sm text-center px-4 mb-4">{project.description}</p>
