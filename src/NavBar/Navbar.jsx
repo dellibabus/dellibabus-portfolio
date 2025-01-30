@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home'); // State to store active link
+  const [activeLink, setActiveLink] = useState('Home');
 
   const Navlist = [
     { name: 'Home', link: 'home' },
@@ -15,10 +15,10 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Function to check which section is in view
+
   const handleScroll = () => {
     const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    const scrollPosition = window.scrollY + 50; // Adjust for better accuracy
+    const scrollPosition = window.scrollY + 50; 
 
     sections.forEach((section) => {
       const sectionElement = document.getElementById(section);
@@ -32,13 +32,12 @@ const Navbar = () => {
     });
   };
 
-  // Add scroll event listener
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Function to dynamically apply the active class
   const isActiveLink = (link) => (activeLink === link ? 'text-indigo-400' : 'text-white');
 
   return (
