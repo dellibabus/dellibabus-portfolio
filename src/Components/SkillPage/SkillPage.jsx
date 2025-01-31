@@ -22,7 +22,7 @@ const SkillsSection = () => {
     <section className="bg-gray-900 py-16 pt-20" id="skills">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-indigo-500 uppercase mb-6">Skills</h2>
+          <h2 className="text-4xl font-bold text-teal-500 uppercase mb-6">Skills</h2>
           <p className="text-lg text-gray-400">
             A collection of technologies and tools I have worked with.
           </p>
@@ -31,7 +31,7 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center w-[130px] sm:w-[160px] lg:w-[180px] h-[130px] sm:h-[160px] lg:h-[180px] p-4 bg-gray-800 rounded-lg shadow-lg hover:shadow-indigo-500/40 transform hover:scale-110 transition-all duration-300"
+              className="flex flex-col items-center justify-center w-[130px] sm:w-[160px] lg:w-[180px] h-[130px] sm:h-[160px] lg:h-[180px] p-4 bg-gray-800 rounded-lg shadow-lg hover:shadow-teal-500/40 transform hover:scale-110 transition-all duration-300"
             >
               {skill.icon}
               <h5 className="text-base sm:text-lg lg:text-xl font-semibold text-white mt-2 text-center">

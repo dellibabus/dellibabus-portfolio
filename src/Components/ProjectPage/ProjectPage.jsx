@@ -51,7 +51,7 @@ const ProjectSection = () => {
       <div className="container mx-auto px-4">
 
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-indigo-500 uppercase tracking-wide">Projects</h2>
+          <h2 className="text-4xl font-bold text-teal-500 uppercase tracking-wide">Projects</h2>
           <p className="text-lg text-gray-300 mt-4">
             Explore some of my featured projects. Click on the links to view the source code on GitHub.
           </p>
@@ -78,7 +78,7 @@ const ProjectSection = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2 bg-indigo-500 text-white font-medium rounded-lg shadow hover:bg-indigo-600 hover:shadow-lg transition-all"
+                  className="px-6 py-2 bg-teal-500 text-white font-medium rounded-lg shadow hover:bg-teal-600 hover:shadow-lg transition-all"
                 >
                   View on GitHub
                 </a>

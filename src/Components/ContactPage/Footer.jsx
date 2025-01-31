@@ -14,13 +14,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center gap-6 lg:items-start">
-            <div className="flex items-center gap-3 text-gray-400 hover:text-indigo-500 transition-colors duration-300">
+            <div className="flex items-center gap-3 text-gray-400 hover:text-teal-500 transition-colors duration-300">
               <FaEnvelope size={20} />
               <a href="mailto:sdellibabu8@gmail.com" className="hover:underline">
                 sdellibabu8@gmail.com
               </a>
             </div>
-            <div className="flex items-center gap-3 text-gray-400 hover:text-indigo-500 transition-colors duration-300">
+            <div className="flex items-center gap-3 text-gray-400 hover:text-teal-500 transition-colors duration-300">
               <FaPhoneAlt size={20} />
               <a href="tel:+919344262658" className="hover:underline">
                 +91 9344262658
@@ -34,7 +34,7 @@ const Footer = () => {
               href="https://github.com/dellibabus"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-500 transition-colors duration-300"
+              className="text-gray-400 hover:text-teal-500 transition-colors duration-300"
             >
               <FaGithub size={28} />
             </a>
@@ -42,7 +42,7 @@ const Footer = () => {
               href="https://linkedin.com/in/delli-babu-s"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-500 transition-colors duration-300"
+              className="text-gray-400 hover:text-teal-500 transition-colors duration-300"
             >
               <FaLinkedin size={28} />
             </a>
@@ -50,7 +50,7 @@ const Footer = () => {
               href="https://instagram.com/_x_delli_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-indigo-500 transition-colors duration-300"
+              className="text-gray-400 hover:text-teal-500 transition-colors duration-300"
             >
               <FaInstagram size={28} />
             </a>
@@ -62,7 +62,7 @@ const Footer = () => {
 
         {/* Responsive Behavior */}
         <div className="text-center text-gray-500 text-sm">
-          Built with 🤍 by Delli Babu
+          Built with by Delli Babu 🤍
         </div>
       </div>
     </footer>

@@ -38,7 +38,7 @@ const ContactSection = () => {
   return (
     <section className="bg-gray-900 py-16 pt-20" id="contact">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-indigo-500 uppercase tracking-wide">
+        <h2 className="text-4xl font-bold text-teal-500 uppercase tracking-wide">
           Contact Me
         </h2>
         <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
@@ -49,7 +49,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center">
           <div className="bg-gray-800 w-full max-w-2xl p-6 rounded-lg shadow-xl hover:shadow-2xl transform transition-transform duration-300">
-            <h3 className="text-2xl font-semibold text-indigo-400 mb-6 text-center">
+            <h3 className="text-2xl font-semibold text-teal-400 mb-6 text-center">
               Get in Touch
             </h3>
             <form className="space-y-6" onSubmit={onSubmit}>
@@ -68,7 +68,7 @@ const ContactSection = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     placeholder="Your Name"
                     required
                   />
@@ -84,7 +84,7 @@ const ContactSection = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                     placeholder="Your Email"
                     required
                   />
@@ -102,7 +102,7 @@ const ContactSection = () => {
                   type="tel"
                   id="mobile"
                   name="mobile"
-                  className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Your Mobile Number"
                   pattern="[0-9]{10}"
                   title="Please enter a valid 10-digit mobile number."
@@ -121,7 +121,7 @@ const ContactSection = () => {
                   id="message"
                   name="message"
                   rows="4"
-                  className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full p-3 mt-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="Your Message"
                   required
                 ></textarea>
@@ -129,7 +129,7 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-lg bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400"
+                className="w-full py-3 rounded-lg bg-teal-500 text-white font-semibold hover:bg-teal-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-400"
                 disabled={result === "Sending..."}
               >
                 {result === "Sending..." ? "Sending..." : "Send Message"}

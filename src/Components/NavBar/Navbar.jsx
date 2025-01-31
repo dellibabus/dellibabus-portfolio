@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('Home');
+  const [activeLink, setActiveLink] = useState('home');
 
   const Navlist = [
     { name: 'Home', link: 'home' },
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-    const scrollPosition = window.scrollY + 50; 
+    const scrollPosition = window.scrollY + 50;
 
     sections.forEach((section) => {
       const sectionElement = document.getElementById(section);
@@ -36,57 +36,101 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActiveLink = (link) => (activeLink === link ? 'text-indigo-400' : 'text-white');
+  const isActiveLink = (link) => (activeLink === link ? 'text-teal-400 font-semibold' : 'text-gray-300');
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 h-20 text-white p-4 flex items-center justify-between shadow-lg z-50">
-     
+    <nav className="fixed top-0 left-0 w-full h-20 bg-gray-900 text-white flex items-center justify-between px-6 md:px-12 shadow-lg z-50">
+      {/* Logo */}
       <div className="text-2xl font-extrabold tracking-wide">
-        <a href="#home" className="hover:text-gray-200">
-          <span className='text-indigo-400 underline'>D</span>elli.
+        <a href="#home" className="hover:text-gray-200 transition duration-300">
+          <span className="text-teal-400 hover:underline">D</span>elli.
         </a>
       </div>
 
-      <div
-        className={`${isOpen ? 'block' : 'hidden'} md:flex flex-1 justify-center items-center md:static absolute top-16 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent p-4 md:p-0`}
-      >
-        <ul className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 items-center text-lg">
+      {/* Desktop Menu */}
+      <div className="hidden md:flex items-center space-x-10">
+        <ul className="flex space-x-8 items-center text-lg">
           {Navlist.map((item, index) => (
             <li key={index}>
               <a
                 href={`#${item.link}`}
-                className={`hover:text-indigo-400 transition ease-in duration-500 ${isActiveLink(item.link)}`}
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(item.link)}`}
               >
                 {item.name}
               </a>
             </li>
           ))}
         </ul>
+
+        {/* Social Icons */}
+        <div className="flex items-center space-x-6">
+          <a
+            href="https://github.com/dellibabus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-400 transition duration-300"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://linkedin.com/in/delli-babu-s"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-400 transition duration-300"
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </div>
       </div>
 
-
-      <div className="hidden md:flex items-center space-x-5">
-        <a
-          href="https://github.com/dellibabus"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-indigo-400 transition ease-in duration-500"
-        >
-          <FaGithub size={24} />
-        </a>
-        <a
-          href="https://linkedin.com/in/delli-babu-s"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-indigo-400 transition ease-in duration-500"
-        >
-          <FaLinkedin size={24} />
-        </a>
-      </div>
-
-      
+      {/* Mobile Menu Toggle Button */}
       <div className="md:hidden" onClick={toggleMenu}>
-        {isOpen ? <FaTimes size={28} className="hover:text-gray-200" /> : <FaBars size={28} className="hover:text-gray-200" />}
+        {isOpen ? (
+          <FaTimes size={28} className="hover:text-gray-200 transition duration-300" />
+        ) : (
+          <FaBars size={28} className="hover:text-gray-200 transition duration-300" />
+        )}
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed top-20 right-0 w-64 h-[calc(100vh-5rem)] bg-gray-900 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        } shadow-2xl`}
+      >
+        <ul className="flex flex-col space-y-6 p-6 text-lg">
+          {Navlist.map((item, index) => (
+            <li key={index}>
+              <a
+                href={`#${item.link}`}
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(item.link)}`}
+                onClick={() => setIsOpen(false)} // Close menu on link click
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Social Icons in Mobile Menu */}
+        <div className="flex items-center space-x-6 p-6">
+          <a
+            href="https://github.com/dellibabus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-400 transition duration-300"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://linkedin.com/in/delli-babu-s"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-400 transition duration-300"
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </div>
       </div>
     </nav>
   );
