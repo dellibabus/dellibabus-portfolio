@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import Logo from "../../assets/Delli-Logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
 
   const Navlist = [
-    { name: 'Home', link: 'home' },
-    { name: 'About', link: 'about' },
-    { name: 'Skills', link: 'skills' },
-    { name: 'Projects', link: 'projects' },
-    { name: 'Contact', link: 'contact' },
+    { name: "Home", link: "home" },
+    { name: "About", link: "about" },
+    { name: "Skills", link: "skills" },
+    { name: "Projects", link: "projects" },
+    { name: "Contact", link: "contact" },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleScroll = () => {
-    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+    const sections = ["home", "about", "skills", "projects", "contact"];
     const scrollPosition = window.scrollY + 50;
 
     sections.forEach((section) => {
@@ -24,7 +25,10 @@ const Navbar = () => {
       if (sectionElement) {
         const sectionTop = sectionElement.offsetTop;
         const sectionHeight = sectionElement.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
           setActiveLink(section);
         }
       }
@@ -32,29 +36,30 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isActiveLink = (link) => (activeLink === link ? 'text-teal-400 font-semibold' : 'text-gray-300');
+  const isActiveLink = (link) =>
+    activeLink === link ? "text-teal-400 font-semibold" : "text-gray-300";
 
   return (
     <nav className="fixed top-0 left-0 w-full h-16 bg-gray-900 text-white flex items-center justify-between px-6 md:px-12 shadow-lg z-50">
-      {/* Logo */}
       <div className="text-2xl font-extrabold tracking-wide">
         <a href="#home" className="hover:text-gray-200 transition duration-300">
-          <span className="text-teal-400 hover:underline">D</span>elli.
+          <img src={Logo} alt="logo" className="w-14 h-14"/>
         </a>
       </div>
 
-      {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-10">
         <ul className="flex space-x-8 items-center text-lg">
           {Navlist.map((item, index) => (
             <li key={index}>
               <a
                 href={`#${item.link}`}
-                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(item.link)}`}
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(
+                  item.link
+                )}`}
               >
                 {item.name}
               </a>
@@ -62,7 +67,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
         <div className="flex items-center space-x-6">
           <a
             href="https://github.com/dellibabus"
@@ -85,19 +89,23 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Toggle Button */}
       <div className="md:hidden" onClick={toggleMenu} aria-label="Toggle Menu">
         {isOpen ? (
-          <FaTimes size={28} className="hover:text-gray-200 transition duration-300" />
+          <FaTimes
+            size={28}
+            className="hover:text-gray-200 transition duration-300"
+          />
         ) : (
-          <FaBars size={28} className="hover:text-gray-200 transition duration-300" />
+          <FaBars
+            size={28}
+            className="hover:text-gray-200 transition duration-300"
+          />
         )}
       </div>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed top-20 right-0 w-64 h-[calc(100vh-5rem)] bg-gray-900 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? "translate-x-0" : "translate-x-full"
         } shadow-2xl`}
       >
         <ul className="flex flex-col space-y-6 p-6 text-lg">
@@ -105,8 +113,10 @@ const Navbar = () => {
             <li key={index}>
               <a
                 href={`#${item.link}`}
-                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(item.link)}`}
-                onClick={() => setIsOpen(false)} // Close menu on link click
+                className={`hover:text-teal-400 transition duration-300 ${isActiveLink(
+                  item.link
+                )}`}
+                onClick={() => setIsOpen(false)}
                 aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
@@ -115,7 +125,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons in Mobile Menu */}
         <div className="flex items-center space-x-6 p-6">
           <a
             href="https://github.com/dellibabus"

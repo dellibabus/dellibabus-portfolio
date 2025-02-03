@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
 import Portfolio from "../../assets/portfolio.jpg";
 import wallpaper from "../../assets/wallpaper.jpg";
 import movie from "../../assets/movie.jpg";
@@ -50,6 +49,7 @@ const ProjectSection = () => {
   return (
     <section className="bg-gray-900 py-16 pt-20" id="projects">
       <div className="container mx-auto px-6">
+
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-teal-500 uppercase tracking-wide">Projects</h2>
           <p className="text-lg text-gray-300 mt-4">
@@ -59,12 +59,9 @@ const ProjectSection = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={index}
               className="relative rounded-lg overflow-hidden shadow-xl bg-gray-800 group hover:shadow-teal-500/40 transform hover:scale-105 transition-all duration-500 ease-in-out"
-              initial={{ opacity: 0, y: 50 }} // Initial state for animation
-              animate={{ opacity: 1, y: 0 }} // Final state for animation
-              transition={{ delay: index * 0.2, type: "spring", stiffness: 50 }} // Delay each card animation
             >
               {/* Image */}
               <img
@@ -86,7 +83,7 @@ const ProjectSection = () => {
                   View on GitHub
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
