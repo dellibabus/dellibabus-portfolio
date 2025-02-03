@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 import Portfolio from "../../assets/portfolio.jpg";
 import wallpaper from "../../assets/wallpaper.jpg";
 import movie from "../../assets/movie.jpg";
@@ -48,8 +49,7 @@ const projects = [
 const ProjectSection = () => {
   return (
     <section className="bg-gray-900 py-16 pt-20" id="projects">
-      <div className="container mx-auto px-4">
-
+      <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-teal-500 uppercase tracking-wide">Projects</h2>
           <p className="text-lg text-gray-300 mt-4">
@@ -57,33 +57,36 @@ const ProjectSection = () => {
           </p>
         </div>
 
-
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative rounded-lg overflow-hidden shadow-lg bg-gray-800 group hover:shadow-2xl transition-all duration-300"
+              className="relative rounded-lg overflow-hidden shadow-xl bg-gray-800 group hover:shadow-teal-500/40 transform hover:scale-105 transition-all duration-500 ease-in-out"
+              initial={{ opacity: 0, y: 50 }} // Initial state for animation
+              animate={{ opacity: 1, y: 0 }} // Final state for animation
+              transition={{ delay: index * 0.2, type: "spring", stiffness: 50 }} // Delay each card animation
             >
-
+              {/* Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:brightness-90"
               />
 
-              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                 <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-300 text-sm text-center px-4 mb-4">{project.description}</p>
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2 bg-teal-500 text-white font-medium rounded-lg shadow hover:bg-teal-600 hover:shadow-lg transition-all"
+                  className="px-6 py-2 bg-teal-500 text-white font-medium rounded-lg shadow hover:bg-teal-600 hover:shadow-lg transition-all duration-300"
                 >
                   View on GitHub
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

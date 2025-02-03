@@ -69,6 +69,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400 transition duration-300"
+            aria-label="GitHub"
           >
             <FaGithub size={24} />
           </a>
@@ -77,6 +78,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400 transition duration-300"
+            aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
           </a>
@@ -84,7 +86,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Toggle Button */}
-      <div className="md:hidden" onClick={toggleMenu}>
+      <div className="md:hidden" onClick={toggleMenu} aria-label="Toggle Menu">
         {isOpen ? (
           <FaTimes size={28} className="hover:text-gray-200 transition duration-300" />
         ) : (
@@ -105,6 +107,7 @@ const Navbar = () => {
                 href={`#${item.link}`}
                 className={`hover:text-teal-400 transition duration-300 ${isActiveLink(item.link)}`}
                 onClick={() => setIsOpen(false)} // Close menu on link click
+                aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
               </a>
@@ -119,6 +122,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400 transition duration-300"
+            aria-label="GitHub"
           >
             <FaGithub size={24} />
           </a>
@@ -127,6 +131,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-teal-400 transition duration-300"
+            aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
           </a>

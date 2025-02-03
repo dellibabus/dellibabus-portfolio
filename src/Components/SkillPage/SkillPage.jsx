@@ -1,7 +1,7 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaNodeJs, FaDatabase, FaFigma } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26] text-7xl mb-4" /> },
@@ -22,22 +22,38 @@ const SkillsSection = () => {
     <section className="bg-gray-900 py-16 pt-20" id="skills">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-teal-500 uppercase mb-6">Skills</h2>
-          <p className="text-lg text-gray-400">
+          <motion.h2
+            className="text-4xl font-bold text-teal-500 uppercase mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+          >
+            Skills
+          </motion.h2>
+          <motion.p
+            className="text-lg text-gray-400"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+          >
             A collection of technologies and tools I have worked with.
-          </p>
+          </motion.p>
         </div>
+
         <div className="flex flex-wrap justify-center items-center gap-10">
           {skills.map((skill, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex flex-col items-center justify-center w-[130px] sm:w-[160px] lg:w-[180px] h-[130px] sm:h-[160px] lg:h-[180px] p-4 bg-gray-800 rounded-lg shadow-lg hover:shadow-teal-500/40 transform hover:scale-110 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 * index, duration: 0.8 }}
             >
               {skill.icon}
               <h5 className="text-base sm:text-lg lg:text-xl font-semibold text-white mt-2 text-center">
                 {skill.name}
               </h5>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
