@@ -39,7 +39,7 @@ const Navbar = () => {
   const isActiveLink = (link) => (activeLink === link ? 'text-teal-400 font-semibold' : 'text-gray-300');
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-20 bg-gray-900 text-white flex items-center justify-between px-6 md:px-12 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 w-full h-16 bg-gray-900 text-white flex items-center justify-between px-6 md:px-12 shadow-lg z-50">
       {/* Logo */}
       <div className="text-2xl font-extrabold tracking-wide">
         <a href="#home" className="hover:text-gray-200 transition duration-300">
