@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
-import Logo from "../../assets/Delli-Logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +46,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full h-16 bg-gray-900 text-white flex items-center justify-between px-6 md:px-12 shadow-lg z-50">
       <div className="text-2xl font-extrabold tracking-wide">
         <a href="#home" className="hover:text-gray-200 transition duration-300">
-          <img src={Logo} alt="logo" className="w-14 h-14"/>
+          <h1><span className="text-teal-500 underline">D</span>elli</h1>
         </a>
       </div>
 
